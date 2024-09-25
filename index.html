@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Faheem Resume</h1>
+    </header>
+    <main>
+        <section id="inputForm">
+            <h2>Enter Your Information</h2>
+            <form id="resumeForm">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="tagline">Tagline or Job Title:</label>
+                    <input type="text" id="tagline" name="tagline">
+                </fieldset>
+                <fieldset>
+                    <legend>Experience</legend>
+                    <div id="experienceList">
+                        <div class="experienceItem">
+                            <label for="expTitle">Job Title:</label>
+                            <input type="text" class="expTitle" required>
+                            <label for="expCompany">Company:</label>
+                            <input type="text" class="expCompany" required>
+                            <label for="expDates">Dates:</label>
+                            <input type="text" class="expDates" required>
+                            <label for="expDesc">Description:</label>
+                            <textarea class="expDesc" required></textarea>
+                        </div>
+                    </div>
+                    <button type="button" id="addExperience">Add Another Experience</button>
+                </fieldset>
+                <fieldset>
+                    <legend>Education</legend>
+                    <div id="educationList">
+                        <div class="educationItem">
+                            <label for="eduDegree">Degree:</label>
+                            <input type="text" class="eduDegree" required>
+                            <label for="eduInstitution">Institution:</label>
+                            <input type="text" class="eduInstitution" required>
+                            <label for="eduYear">Year:</label>
+                            <input type="text" class="eduYear" required>
+                        </div>
+                    </div>
+                    <button type="button" id="addEducation">Add Another Education</button>
+                </fieldset>
+                <fieldset>
+                    <legend>Skills</legend>
+                    <div id="skillsList">
+                        <input type="text" class="skill" placeholder="Skill">
+                    </div>
+                    <button type="button" id="addSkill">Add Another Skill</button>
+                </fieldset>
+                <button type="submit">Generate Resume</button>
+            </form>
+        </section>
+        <section id="resumeOutput">
+            <h2>Generated Resume</h2>
+            <div id="resumeContent"></div>
+            <button id="downloadResume">Download Resume</button>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
